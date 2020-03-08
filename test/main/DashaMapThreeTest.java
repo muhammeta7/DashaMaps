@@ -4,7 +4,7 @@ public class DashaMapThreeTest implements HashMapX{
 
 
     @Override
-    public void set(String key, String value) {
+    public void set(String key, Integer value) {
 
     }
 

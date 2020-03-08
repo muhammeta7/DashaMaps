@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16758b06-b4a0-4f1d-844b-c1c64f8682b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/DashaMapOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/DashaMapThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/DashaMapTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/HashMapX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/main/DashaMapOneTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/main/DashaMapThreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/main/DashaMapTwoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DashaMaps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DashaMaps.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DashaMapOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DashaMapOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DashaMapTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DashaMapTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HashMapX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HashMapX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main/DashaMapOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/main/DashaMapOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main/DashaMapThreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/main/DashaMapThreeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Yqo9BZKrb9iHuZ9MDUyX2XiA8r" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,20 +44,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565362466667" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DashaMapOneTest.nodeArrayTest2">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -59,6 +71,56 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashaMapOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DashaMaps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.DashaMapOneTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashaMapOneTest.nodeArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DashaMaps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.DashaMapOneTest" />
+      <option name="METHOD_NAME" value="nodeArrayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashaMapOneTest.nodeArrayTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DashaMaps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.DashaMapOneTest" />
+      <option name="METHOD_NAME" value="nodeArrayTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,6 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DashaMapOneTest.nodeArrayTest2" />
+        <item itemvalue="JUnit.DashaMapOneTest" />
+        <item itemvalue="JUnit.DashaMapOneTest.nodeArrayTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -101,7 +170,7 @@
       <updated>1565357944193</updated>
       <workItem from="1565357947238" duration="6000" />
       <workItem from="1565357963802" duration="4390000" />
-      <workItem from="1583679343630" duration="1531000" />
+      <workItem from="1583679343630" duration="7898000" />
     </task>
     <servers />
   </component>
@@ -109,10 +178,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="608" y="-846" key="#com.intellij.ide.util.MemberChooser" timestamp="1583681275279">
+    <state x="608" y="-846" key="#com.intellij.ide.util.MemberChooser" timestamp="1583686146320">
       <screen x="-165" y="-1057" width="1920" height="989" />
     </state>
-    <state x="608" y="-846" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583681275279" />
+    <state x="608" y="-846" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583686146320" />
+    <state width="1878" height="267" key="GridCell.Tab.0.bottom" timestamp="1583687120440">
+      <screen x="-165" y="-1057" width="1920" height="989" />
+    </state>
+    <state width="1878" height="267" key="GridCell.Tab.0.bottom/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583687120440" />
+    <state width="1878" height="267" key="GridCell.Tab.0.center" timestamp="1583687120439">
+      <screen x="-165" y="-1057" width="1920" height="989" />
+    </state>
+    <state width="1878" height="267" key="GridCell.Tab.0.center/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583687120439" />
+    <state width="1878" height="267" key="GridCell.Tab.0.left" timestamp="1583687120439">
+      <screen x="-165" y="-1057" width="1920" height="989" />
+    </state>
+    <state width="1878" height="267" key="GridCell.Tab.0.left/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583687120439" />
+    <state width="1878" height="267" key="GridCell.Tab.0.right" timestamp="1583687120439">
+      <screen x="-165" y="-1057" width="1920" height="989" />
+    </state>
+    <state width="1878" height="267" key="GridCell.Tab.0.right/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583687120439" />
+    <state x="304" y="-924" key="SettingsEditor" timestamp="1583687024988">
+      <screen x="-165" y="-1057" width="1920" height="989" />
+    </state>
+    <state x="304" y="-924" key="SettingsEditor/0.23.1280.777/-165.-1057.1920.989@-165.-1057.1920.989" timestamp="1583687024988" />
+    <state x="521" y="-662" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583685911646">
+      <screen x="-165" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="521" y="-662" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1280.726/-165.-1057.1920.1057@-165.-1057.1920.1057" timestamp="1583685911646" />
   </component>
   <component name="masterDetails">
     <states>

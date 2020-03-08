@@ -1,8 +1,10 @@
 package main;
 
 public class DashaMapTwo implements HashMapX{
+
+
     @Override
-    public void set(String key, String value) {
+    public void set(String key, Integer value) {
 
     }
 
