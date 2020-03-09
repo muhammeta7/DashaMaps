@@ -16,7 +16,7 @@ public class DashaMapOneTest {
     @Test
     public void dashamapConstructorTest(){
         // Given
-        Node[] nodeArray = map.getNodeArray();
+        Node[] nodeArray = map.getHashArray();
         Integer expected = 26;
 
         // When
