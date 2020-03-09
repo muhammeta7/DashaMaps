@@ -92,3 +92,48 @@ public class DashaMapOne implements HashMapX {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* public Node findIn(String keyHash, String key){
+        for (Node n : hashArray) {
+            if (n.getKey().equals(keyHash)) {
+                Node tempNode = n;
+                while (!tempNode.getKey().equals(key)) {
+                    tempNode = tempNode.getNext();
+                }
+                return tempNode;
+            }
+        }
+        return null;
+    }*/
+
+
+
+
+
+   /* String keyHash = HashFunctionOne(key);
+    Node newNode = findIn(keyHash, key);
+        return newNode.getValue();*/

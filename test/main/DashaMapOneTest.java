@@ -52,18 +52,19 @@ public class DashaMapOneTest {
         assertEquals(expected, actual);
     }
 
-    // Test doesn't reall show how they append
     @Test
     public void appendToTest(){
         // Given
-        Node[] actual = map.getNodeArray();
-        Node newNode = new Node("h", 1, null);
+        Node[] nodeArray = map.getNodeArray();
+        Node newNode = new Node("alimony", 1, null);
 
         // When
-        map.appendTo("h", newNode);
+        map.appendTo("a", newNode);
+        String expected = nodeArray[0].getNext().getKey();
+
 
         // Then
-        assertTrue(actual[7].getValue() == null);
+        assertTrue(expected.equals("alimony"));
     }
 
 
