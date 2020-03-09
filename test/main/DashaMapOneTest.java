@@ -29,11 +29,11 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest(){
         // Given
-        Node[] nodeArray = map.getNodeArray();
+        Node[] hashArray = map.getNodeArray();
         String expected = "d";
 
         // When
-        String actual = nodeArray[3].getKey();
+        String actual = hashArray[3].getKey();
 
         // Then
         assertEquals(expected, actual);
@@ -42,24 +42,42 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest2(){
         // Given
-        Node[] nodeArray = map.getNodeArray();
+        Node[] hashArray = map.getNodeArray();
         String expected = "z";
 
         // When
-        String actual = nodeArray[25].getKey();
+        String actual = hashArray[25].getKey();
 
         // Then
         assertEquals(expected, actual);
     }
 
+    // Test doesn't reall show how they append
     @Test
     public void appendToTest(){
         // Given
+        Node[] actual = map.getNodeArray();
+        Node newNode = new Node("h", 1, null);
 
         // When
+        map.appendTo("h", newNode);
 
         // Then
+        assertTrue(actual[7].getValue() == null);
+    }
 
+
+    @Test
+    public void isEmptyTest(){
+        // Given
+        String expectedKey = "Zipcode";
+        Integer expectedValue = 10;
+
+        // When
+        map.set(expectedKey, expectedValue);
+
+        // Then
+        assertFalse(map.isEmpty());
     }
 
 

@@ -14,7 +14,7 @@ public class DashaMapTwo implements HashMapX{
     }
 
     @Override
-    public String get(String key) {
+    public Integer get(String key) {
         return null;
     }
 

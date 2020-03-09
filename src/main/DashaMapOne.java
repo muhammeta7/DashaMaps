@@ -2,15 +2,15 @@ package main;
 
 public class DashaMapOne implements HashMapX {
 
-    Node[] nodeArray;
+    Node[] hashArray;
 
     public DashaMapOne(){
 
-        nodeArray = new Node[26];
+        hashArray = new Node[26];
         char a = 'a';
         for (int i = 0; i < 26; i++) {
             char alphabet = (char)(a + i);
-            nodeArray[i] = new Node(Character.toString(alphabet), null, null);
+            hashArray[i] = new Node(Character.toString(alphabet), null, null);
         }
 
     }
@@ -24,7 +24,7 @@ public class DashaMapOne implements HashMapX {
 
     public void appendTo(String letter, Node node){
 
-        for (Node n : nodeArray) {
+        for (Node n : hashArray) {
             if (n.getKey().equals(letter)) {
                 Node tempNode = n;
                 while (tempNode.getNext() != null) {
@@ -43,19 +43,25 @@ public class DashaMapOne implements HashMapX {
         appendTo(keyHash, newNode);
     }
 
+
+    @Override
+    public Integer get(String key) {
+       return null;
+    }
+
     @Override
     public String delete(String key) {
         return null;
     }
 
     @Override
-    public String get(String key) {
-        return null;
-    }
-
-    @Override
     public boolean isEmpty() {
-        return false;
+        for (Node node : hashArray) {
+            if (node.getNext() != null) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
@@ -69,12 +75,20 @@ public class DashaMapOne implements HashMapX {
     }
 
     public Node[] getNodeArray() {
-        return nodeArray;
+        return hashArray;
     }
 
     public void setNodeArray(Node[] nodeArray) {
-        this.nodeArray = nodeArray;
+        this.hashArray = nodeArray;
     }
 }
+
+
+
+
+
+
+
+
 
 
