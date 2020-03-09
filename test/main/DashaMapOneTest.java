@@ -29,7 +29,7 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest(){
         // Given
-        Node[] hashArray = map.getNodeArray();
+        Node[] hashArray = map.getHashArray();
         String expected = "d";
 
         // When
@@ -42,7 +42,7 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest2(){
         // Given
-        Node[] hashArray = map.getNodeArray();
+        Node[] hashArray = map.getHashArray();
         String expected = "z";
 
         // When
@@ -55,16 +55,32 @@ public class DashaMapOneTest {
     @Test
     public void appendToTest(){
         // Given
-        Node[] nodeArray = map.getNodeArray();
+        Node[] nodeArray = map.getHashArray();
         Node newNode = new Node("alimony", 1, null);
 
         // When
         map.appendTo("a", newNode);
         String expected = nodeArray[0].getNext().getKey();
 
-
         // Then
         assertTrue(expected.equals("alimony"));
+    }
+    @Test
+    public void appendToMultipleTest(){
+        // Given
+        Node[] nodeArray = map.getHashArray();
+        Node node1 = new Node("alimony", 1, null);
+        Node node2 = new Node("atlas", 1, null);
+
+        // When
+        map.appendTo("a", node1);
+        map.appendTo("a", node2);
+        String expected1 = nodeArray[0].getNext().getKey();
+        String expected2 = nodeArray[0].getNext().getNext().getKey();
+
+        // Then
+        assertEquals("alimony", expected1);
+        assertEquals("atlas", expected2);
     }
 
 

@@ -15,7 +15,7 @@ public class DashaMapOne implements HashMapX {
 
     }
 
-    private String HashFunctionOne(String input) {
+    public String HashFunctionOne(String input) {
         if (input.length() > 0) {
             return String.valueOf(input.charAt(0)).toLowerCase();
         }
@@ -74,7 +74,7 @@ public class DashaMapOne implements HashMapX {
         return null;
     }
 
-    public Node[] getNodeArray() {
+    public Node[] getHashArray() {
         return hashArray;
     }
 
@@ -92,48 +92,3 @@ public class DashaMapOne implements HashMapX {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* public Node findIn(String keyHash, String key){
-        for (Node n : hashArray) {
-            if (n.getKey().equals(keyHash)) {
-                Node tempNode = n;
-                while (!tempNode.getKey().equals(key)) {
-                    tempNode = tempNode.getNext();
-                }
-                return tempNode;
-            }
-        }
-        return null;
-    }*/
-
-
-
-
-
-   /* String keyHash = HashFunctionOne(key);
-    Node newNode = findIn(keyHash, key);
-        return newNode.getValue();*/
