@@ -143,16 +143,16 @@ public class DashaMapOneTest {
     public void size(){
         // Given
         DashaMapOne dash = new DashaMapOne();
-        map.set("animal", 2);
-        map.set("apple", 5);
-        map.set("banana", 3);
-        map.set("bats", 3);
-        map.set("zebra", 5);
-        map.set("zygote", 3);
+        dash.set("animal", 2);
+        dash.set("apple", 5);
+        dash.set("banana", 3);
+        dash.set("bats", 3);
+        dash.set("zebra", 5);
+        dash.set("zygote", 3);
         Long expected = 6l;
 
         // When
-        long actual = map.size();
+        long actual = dash.size();
 
         // Then
         assertEquals(expected, actual, 0.1);
@@ -164,13 +164,34 @@ public class DashaMapOneTest {
         DashaMapOne thisMap = new DashaMapOne();
         thisMap.set("apple", 4);
         thisMap.set("alimony", 4);
+        thisMap.set("aaaaa", 4);
 
         // When
-
+        thisMap.delete("a", "alimony");
+        Node actual = thisMap.findNode("a", "alimony");
 
         // Then
-//        assertEquals("apple", map.findNode("a", "apple").getKey() );
+        assertNull(actual.getNext());
+        assertNull(thisMap.hashArray[0].getNext().getNext().getNext());
+        assertEquals(thisMap.hashArray[0].getNext().getNext().getKey(), "aaaaa");
     }
 
+    @Test
+    public void deleteTest(){
+        // Given
+        DashaMapOne mappy = new DashaMapOne();
+        mappy.set("apple", 4);
+        mappy.set("alimony", 4);
+        mappy.set("animal", 4);
+
+        // When
+        mappy.delete("alimony");
+        Node actual = mappy.findNode("a", "alimony").getNext();
+
+        // Then
+        assertNull(actual);
+        assertNull(mappy.hashArray[0].getNext().getNext().getNext());
+        assertEquals(mappy.hashArray[0].getNext().getNext().getKey(), "animal");
+    }
 
 }
