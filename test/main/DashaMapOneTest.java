@@ -63,8 +63,9 @@ public class DashaMapOneTest {
         String expected = nodeArray[0].getNext().getKey();
 
         // Then
-        assertTrue(expected.equals("alimony"));
+        assertEquals("alimony", expected);
     }
+
     @Test
     public void appendToMultipleTest(){
         // Given
@@ -75,12 +76,13 @@ public class DashaMapOneTest {
         // When
         map.appendTo("a", node1);
         map.appendTo("a", node2);
-        String expected1 = nodeArray[0].getNext().getKey();
-        String expected2 = nodeArray[0].getNext().getNext().getKey();
+        String actual1 = nodeArray[0].getNext().getKey();
+        String actual2 = nodeArray[0].getNext().getNext().getKey();
+        Integer actual = nodeArray[0].getValue();
 
         // Then
-        assertEquals("alimony", expected1);
-        assertEquals("atlas", expected2);
+        assertEquals("alimony", actual1);
+        assertEquals("atlas", actual2);
     }
 
 
@@ -97,6 +99,78 @@ public class DashaMapOneTest {
         assertFalse(map.isEmpty());
     }
 
+    @Test
+    public void findNodeTest(){
+        map.set("apple", 4);
+        assertEquals("apple", map.findNode("a", "apple").getKey() );
+    }
+
+    @Test
+    public void findNodeForEmptyMap(){
+        DashaMapOne nullMap = new DashaMapOne();
+        assertNotNull(nullMap.findNode("a", "apple"));
+    }
+
+    @Test
+    public void getTest(){
+        // Given
+        map.set("animal", 5);
+        Integer expected = 5;
+        // When
+        Integer actual = map.get("animal");
+
+        // Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void bucketSizeTest(){
+        // Given
+        DashaMapOne dash = new DashaMapOne();
+        map.set("animal", 2);
+        map.set("apple", 5);
+        map.set("aristocrat", 3);
+        Integer expected = 3;
+
+        // When
+        Integer actual = map.bucketSize("a");
+
+        // Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void size(){
+        // Given
+        DashaMapOne dash = new DashaMapOne();
+        map.set("animal", 2);
+        map.set("apple", 5);
+        map.set("banana", 3);
+        map.set("bats", 3);
+        map.set("zebra", 5);
+        map.set("zygote", 3);
+        Long expected = 6l;
+
+        // When
+        long actual = map.size();
+
+        // Then
+        assertEquals(expected, actual, 0.1);
+    }
+
+    @Test
+    public void removeNodeTest(){
+        // Given
+        DashaMapOne thisMap = new DashaMapOne();
+        thisMap.set("apple", 4);
+        thisMap.set("alimony", 4);
+
+        // When
+
+
+        // Then
+//        assertEquals("apple", map.findNode("a", "apple").getKey() );
+    }
 
 
 }

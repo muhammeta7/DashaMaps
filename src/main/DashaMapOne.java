@@ -43,15 +43,53 @@ public class DashaMapOne implements HashMapX {
         appendTo(keyHash, newNode);
     }
 
+    public Node findNode(String hashKey, String key){
 
-    @Override
-    public Integer get(String key) {
-       return null;
+        for(Node n : hashArray){
+            if (n.getKey().equals(hashKey)) {
+                Node tempNode = n;
+                while (!tempNode.getKey().equals(key)) {
+                    if(tempNode.getNext() != null){
+                        tempNode = tempNode.getNext();
+                    } else {
+                        break;
+                    }
+                }
+                return tempNode;
+            }
+        }
+        return null;
+
     }
 
     @Override
-    public String delete(String key) {
-        return null;
+    public Integer get(String key) {
+       String keyHash = HashFunctionOne(key);
+       Node newNode = findNode(keyHash, key);
+       return newNode.getValue();
+    }
+
+    @Override
+    public void delete(String key) {
+        String keyHash = HashFunctionOne(key);
+        removeNode(keyHash, key);
+    }
+
+    public void removeNode(String keyHash, String key){
+
+        for (Node node : hashArray) {
+            if (node.getKey().equals(keyHash)) {
+                Node tempNode = node;
+                Node reconnect = node;
+                while (tempNode.getNext() != null && !tempNode.getKey().equals(key)) {
+                    reconnect = tempNode;
+                    tempNode = tempNode.getNext();
+                }
+                reconnect.setNext(tempNode.getNext());
+                tempNode.setNext(null);
+            }
+        }
+
     }
 
     @Override
@@ -66,12 +104,34 @@ public class DashaMapOne implements HashMapX {
 
     @Override
     public long size() {
-        return 0;
+
+        long count = 0;
+        char a = 'a';
+        for (int i = 0; i < hashArray.length; i++) {
+            char placeHolder = (char) (a + i);
+            Character alphabet = placeHolder;
+            count += bucketSize(alphabet.toString());
+        }
+        return count;
+
     }
 
     @Override
     public Integer bucketSize(String key) {
-        return null;
+
+        int count = 0;
+        key = HashFunctionOne(key);
+        for (Node node : hashArray) {
+            if (node.getKey().equals(key)) {
+                Node tempNode = node;
+                while (tempNode.getNext() != null) {
+                    tempNode = tempNode.getNext();
+                    count++;
+                }
+            }
+        }
+        return count;
+
     }
 
     public Node[] getHashArray() {
