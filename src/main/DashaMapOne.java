@@ -9,15 +9,12 @@ public class DashaMapOne extends DashaMap  {
         return null;
     }
 
-
-
     @Override
     public void set(String key, Integer value) {
         String keyHash = HashFunctionOne(key);
         Node newNode = new Node(key, value, null);
         appendTo(keyHash, newNode);
     }
-
 
     @Override
     public Integer get(String key) {
@@ -32,23 +29,10 @@ public class DashaMapOne extends DashaMap  {
         delete(keyHash, key);
     }
 
-
     @Override
     public Integer bucketSize(String key) {
-
-        int count = 0;
         key = HashFunctionOne(key);
-        for (Node node : hashArray) {
-            if (node.getKey().equals(key)) {
-                Node tempNode = node;
-                while (tempNode.getNext() != null) {
-                    tempNode = tempNode.getNext();
-                    count++;
-                }
-            }
-        }
-        return count;
-
+        return checkBuckets(key);
     }
 
 

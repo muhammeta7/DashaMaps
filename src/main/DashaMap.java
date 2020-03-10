@@ -93,8 +93,20 @@ public abstract class DashaMap implements HashMapX{
         return hashArray;
     }
 
-    public void setNodeArray(Node[] nodeArray) {
-        this.hashArray = nodeArray;
+    public Integer checkBuckets(String key){
+
+        int count = 0;
+        for (Node node : hashArray) {
+            if (node.getKey().equals(key)) {
+                Node tempNode = node;
+                while (tempNode.getNext() != null) {
+                    tempNode = tempNode.getNext();
+                    count++;
+                }
+            }
+        }
+        return count;
+
     }
 
 

@@ -6,16 +6,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class DashaMapOneTest {
-    DashaMapOne map;
-
-    @Before
-    public void setup(){
-         map = new DashaMapOne();
-    }
 
     @Test
-    public void dashamapConstructorTest(){
+    public void dashamapOneConstructorTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         Node[] nodeArray = map.getHashArray();
         Integer expected = 26;
 
@@ -29,6 +24,7 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         Node[] hashArray = map.getHashArray();
         String expected = "d";
 
@@ -42,6 +38,7 @@ public class DashaMapOneTest {
     @Test
     public void nodeArrayTest2(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         Node[] hashArray = map.getHashArray();
         String expected = "z";
 
@@ -55,6 +52,7 @@ public class DashaMapOneTest {
     @Test
     public void appendToTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         Node[] nodeArray = map.getHashArray();
         Node newNode = new Node("alimony", 1, null);
 
@@ -69,6 +67,7 @@ public class DashaMapOneTest {
     @Test
     public void appendToMultipleTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         Node[] nodeArray = map.getHashArray();
         Node node1 = new Node("alimony", 1, null);
         Node node2 = new Node("atlas", 1, null);
@@ -78,7 +77,6 @@ public class DashaMapOneTest {
         map.appendTo("a", node2);
         String actual1 = nodeArray[0].getNext().getKey();
         String actual2 = nodeArray[0].getNext().getNext().getKey();
-        Integer actual = nodeArray[0].getValue();
 
         // Then
         assertEquals("alimony", actual1);
@@ -89,6 +87,7 @@ public class DashaMapOneTest {
     @Test
     public void isEmptyTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         String expectedKey = "Zipcode";
         Integer expectedValue = 10;
 
@@ -101,6 +100,7 @@ public class DashaMapOneTest {
 
     @Test
     public void findNodeTest(){
+        DashaMapOne map = new DashaMapOne();
         map.set("apple", 4);
         assertEquals("apple", map.findNode("a", "apple").getKey() );
     }
@@ -114,6 +114,7 @@ public class DashaMapOneTest {
     @Test
     public void getTest(){
         // Given
+        DashaMapOne map = new DashaMapOne();
         map.set("animal", 5);
         Integer expected = 5;
         // When
@@ -127,13 +128,13 @@ public class DashaMapOneTest {
     public void bucketSizeTest(){
         // Given
         DashaMapOne dash = new DashaMapOne();
-        map.set("animal", 2);
-        map.set("apple", 5);
-        map.set("aristocrat", 3);
+        dash.set("animal", 2);
+        dash.set("apple", 5);
+        dash.set("aristocrat", 3);
         Integer expected = 3;
 
         // When
-        Integer actual = map.bucketSize("a");
+        Integer actual = dash.bucketSize("a");
 
         // Then
         assertEquals(expected, actual);
